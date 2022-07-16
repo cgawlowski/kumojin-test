@@ -1,10 +1,10 @@
-class EventsController < ApplicationController
-
+class EventsController < ApplicationController 
   def index
     @events = Event.all
   end
 
   def show
+    @event = Event.find(params[:id])
   end
 
   def new
@@ -13,10 +13,9 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.new(event_params)
-    @event.user = current_user
 
     if @event.save
-      redirect_to root_path(@event), notice: "L'évènement a bien été créé"
+      redirect_to events_path(@event), notice: "L'évènement a bien été créé"
     else
       render :new
     end
@@ -27,12 +26,12 @@ class EventsController < ApplicationController
 
   def update
     @event.update(event_params)
-    redirect_to event_path(@event), notice: "L'évènement a bien été mis à jour"
+    redirect_to events_path(@event), notice: "L'évènement a bien été mis à jour"
   end
 
   def destroy
     @event.destroy
-    redirect_to root_path(@event), notice: "L'évènement a bien été supprimé"
+    redirect_to events_path(@event), notice: "L'évènement a bien été supprimé"
   end
 
   private

@@ -1,0 +1,7 @@
+<h1>Liste des évènements</h1>
+<ul>
+  <% @events.each do |event| %>
+      <h2><%= event.name %></h2>
+      <%= link_to "See details", event_path(event)  %>
+  <% end %>
+</ul>
