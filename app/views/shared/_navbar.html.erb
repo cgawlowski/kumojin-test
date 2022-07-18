@@ -3,10 +3,7 @@
     <%= link_to events_path, class: "navbar-brand" do %>
       <%= image_tag "https://res.cloudinary.com/dus151ezt/image/upload/v1657990237/Kumojin-test/logo_wcgekk.png" %>
     <% end %>
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
+    <p><%= link_to "Accueil", events_path %></p>
+    <p><%= link_to "Nouvel évènement?", new_event_path %></p>
   </div>
 </div>
