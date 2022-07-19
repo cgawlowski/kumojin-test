@@ -1,11 +1,32 @@
-.navbar-lewagon {
+.navbar {
   background: white;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.navbar-lewagon > div {
+  display: flex;
+  justify-content: flex-start;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 100px;
+.menu {
+  display: flex;
+  flex-wrap: nowrap;
+  
+}
+
+.menu > div {
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: flex-start;
+
+}
+
+.a1 a:link, .a1 a:visited, .a1 a:hover, .a1 a:active  { 
+  text-decoration:none;
+  color: #204676;
+}
+
+.a1 a:hover {
+  font-weight: bold;
 }

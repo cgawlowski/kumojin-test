@@ -1,9 +1,15 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="navbar">
   <div class="container-fluid">
     <%= link_to events_path, class: "navbar-brand" do %>
       <%= image_tag "https://res.cloudinary.com/dus151ezt/image/upload/v1657990237/Kumojin-test/logo_wcgekk.png" %>
     <% end %>
-    <p><%= link_to "Accueil", events_path %></p>
-    <p><%= link_to "Nouvel évènement?", new_event_path %></p>
+    <div class="menu">
+      <div class="a1">
+        <%= link_to "Liste", events_path %>
+      </div>
+      <div class="a1">
+        <%= link_to "Nouvel évènement ?", new_event_path %>
+      </div>
+    </div>
   </div>
 </div>
